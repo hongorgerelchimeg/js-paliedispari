@@ -4,6 +4,7 @@ const btnCheck = document.querySelector('#check');
 btnCheck.addEventListener('click', function() {
 
     const input = document.querySelector('#user-input');
+    const output = document.querySelector('.output');
     userValue = input.value ;
     console.log(userValue);
 
@@ -16,9 +17,9 @@ btnCheck.addEventListener('click', function() {
     }
     
     if (userValue == reverseInput) {
-        return console.log('è una palidroma');
+        return output.innerHTML = "è una palidroma";
     } else {
-        return console.log('non è una palidroma');
+        return output.innerHTML = "non è una palidroma";
     }
     
 })
