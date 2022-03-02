@@ -10,6 +10,15 @@ btnCheck.addEventListener('click', function() {
     let userValue = input.value ;
     console.log(userValue);
 
+    if (palidroma(userValue)) {
+        return output.innerHTML = "è una palidroma";
+    } else {
+        return output.innerHTML = "non è una palidroma";
+    }
+    
+})
+
+function palidroma(userValue) {
     let reverseInput = '';
     for (let index = userValue.length-1; index >= 0 ; index--) {
         console.log(index);
@@ -19,28 +28,12 @@ btnCheck.addEventListener('click', function() {
     }
     
     if (userValue == reverseInput) {
-        return output.innerHTML = "è una palidroma";
+        return true;
     } else {
-        return output.innerHTML = "non è una palidroma";
+        return false;
     }
-    
-})
+}
 
-
-// function palidroma(a) {
-//     let reverseInput;
-//     for (let index = a.length; index > 0 ; index--) {
-        
-//         reverseInput += userValue[index];
-//     }
-    
-//     if (userValue == reverseInput) {
-//         return console.log('è una palidroma');
-//     } else {
-//         return console.log('non è una palidroma');
-//     }
-    
-// }
 
 // Esercizio 2
 
